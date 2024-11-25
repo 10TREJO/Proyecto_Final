@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usulután</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body, html {
+            margin: 0; /* Eliminar márgenes por defecto */
+            padding: 0; /* Eliminar relleno por defecto */
+            height: 100%; /* Asegura que el body ocupe toda la altura */
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente para el encabezado */
+            color: white; /* Color de texto blanco */
+            padding: 20px; /* Espacio interno */
+            text-align: center; /* Centrar texto */
+        }
+        .contenido {
+            display: flex; /* Usamos flexbox para alinear el texto y la imagen */
+            align-items: center; /* Alinear verticalmente */
+            justify-content: space-between; /* Espacio entre el texto y la imagen */
+            margin: 20px; /* Margen alrededor del contenido */
+        }
+        .titulo {
+            font-size: 3em; /* Tamaño del texto para los títulos */
+        }
+
+        .texto-grande {
+            font-size: 1.5em; /* Tamaño del texto para párrafos */
+        }
+        .texto {
+            flex: 1; /* El texto ocupará el espacio disponible */
+            margin-right: 20px; /* Espacio entre el texto y la imagen */
+        }
+        .texto img {
+            max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .imagen {
+            flex: 0 0 300px; /* La imagen tendrá un ancho fijo de 300px */
+        }
+        .imagen img {
+            width: 100%; /* La imagen ocupará el 100% del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            max-width: 900px; /* Limita el ancho máximo de la imagen a 300px */
+            max-height: 800px; /* Limita la altura máxima de la imagen a 200px */
+        }
+        main {
+            position: relative; /* Para que el contenido esté sobre la imagen */
+            z-index: 1; /* Asegura que el contenido esté por encima de la imagen */
+            padding: 20px; /* Espacio interno para el contenido */
+        }
+        h2 {
+            color: white; /* Color de texto blanco para el título */
+            text-align: center; /* Centrar título */
+        }
+        .texto-con-fondo {
+            background-color: rgb(255, 255, 255); /* Fondo blanco semi-transparente */
+            padding: 20px; /* Espacio interno para el texto */
+            border-radius: 10px; /* Bordes redondeados */
+            margin-top: 10px; /* Margen superior para separar del contenido anterior */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function mostrarSeccion(id) {
+                const secciones = document.querySelectorAll('main section');
+                secciones.forEach(function(seccion) {
+                    seccion.style.display = 'none';
+                });
+                const seccionActiva = document.getElementById(id);
+                seccionActiva.style.display = 'block';
+            }
+
+            const enlaces = document.querySelectorAll('nav a');
+            enlaces.forEach(function(enlace) {
+                enlace.addEventListener('click', function(event) {
+                    event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+                    const id = this.getAttribute('href').substring(1);
+                    mostrarSeccion(id);
+                });
+            });
+
+            mostrarSeccion('usulutan'); // Mostrar la sección de Morazán por defecto
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Usulután</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#usulutan">Descripción</li>
+                <li><a href="#productos">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="usulutan">
+            <div class="imagen">
+                <img src="imagenesDepa/vistaUsulutan.jpg" alt="Vista de Morazán">
+            </div>
+            <h1 class="titulo">"La joya escondida de El Salvador"</h1>
+            <div class="contenido">
+                <div class="texto-con-fondo">
+                <p>Usulután es una ciudad comercial nata. Si te gusta conocer a fondo la vida tradicional de los salvadoreños, este es un excelente lugar.<br><br>
+                    Sus calles visiblemente comerciales, ofrecen una perspectiva del día a día de sus habitantes. Como es de esperarse en una llanura costera, su clima es bastante caliente, por lo que ropa fresca, agua y un buen bloqueador solar serán tus grandes acompañantes en esta aventura.<br><br>
+                    Aunque Usulután es un destino de transito hacia otros destinos turísticos cercanos, podrás disfrutar de los sitios como la Casa de la Cultura, volcán de Usulután, laguna del Palo Galán y el muelle de Puerto Parada.<br><br>
+                    El Parque Nacional Bahía de Jiquilisco es otro de los tesoros de Usulután. Este parque es un paraíso para los amantes de la naturaleza, con una gran variedad de flora y fauna, incluyendo varias especies de aves, reptiles y mamíferos.</p>
+                </div>
+                <div class="imagen">
+                    <img src="imagenesDepa/usulutan.jpeg" alt="Vista de Morazán">
+                    <img src="imagenesDepa/usulutan2.jpeg" alt="Llano el Muert, Morazán"
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" style="display:none;">
+            <h2>Productos Destacados</h2>
+            <div class="producto-item">
+                <img src="producto1.jpg" alt="Producto 1">
+                <h3>Producto 1</h3>
+                <p>Descripción breve del producto 1.</p>
+                <a href="#" class="btn">Más Información</a>
+            </div>
+            <div class="producto-item">
+                <img src="producto2.jpg" alt="Producto 2">
+                <h3>Producto 2</h3>
+                <p>Descripción breve del producto 2.</p>
+                <a href="#" class="btn">Más Información</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <ul class="social-media">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* Estilo para que la lista aparezca en una sola línea */
+ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margin */
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+}
+
+li {
+    margin-right: 20px; /* Espaciado entre los elementos */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: black; /* Cambia el color del texto de los enlaces */
+}
+
+/* Estilo para el acordeón */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Asegurarse de que el contenedor principal ocupe todo el espacio disponible */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.alegria {
+    width: 30px; /* Ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 10px auto; /* Centra la imagen con un margen superior e inferior */
+}
+
