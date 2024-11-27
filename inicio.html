@@ -6,7 +6,6 @@
     <title>Oriente Mágico</title>
     <link rel="stylesheet" href="estilo.css">
     <style>
-        
         .image-container {
             width: 100%;
             max-width: 800px;
@@ -16,7 +15,7 @@
             border-radius: 10px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
         }
-
+    
         .fade-image {
             position: absolute;
             width: 100%;
@@ -24,30 +23,30 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-
+    
         .fade-image.active {
             opacity: 1;
         }
-
+    
         h2, h3 {
             text-align: center;
             margin: 20px 0;
         }
-
+    
         p {
             max-width: 600px;
             margin: 0 auto 20px;
             line-height: 1.6; /* Espaciado entre líneas */
             padding: 0 10px; /* Espaciado lateral */
         }
-
+    
         ul {
             list-style-type: none; /* Elimina los puntos de la lista */
             padding: 0;
             max-width: 600px;
             margin: 20px auto;
         }
-
+    
         ul li {
             background: #a8a8a8; /* Color de fondo para los elementos de la lista */
             color: white; /* Color del texto */
@@ -55,7 +54,7 @@
             margin: 5px 0; /* Espaciado entre los elementos de la lista */
             border-radius: 5px; /* Bordes redondeados */
         }
-
+    
         button {
             display: block;
             margin: 20px auto;
@@ -68,11 +67,11 @@
             cursor: pointer;
             transition: background-color 0.3s; /* Transición suave para el color del botón */
         }
-
+    
         button:hover {
             background-color: #160079; /* Color del botón al pasar el mouse */
         }
-
+    
         footer {
             text-align: center;
             padding: 20px 0;
@@ -82,8 +81,7 @@
             bottom: 0;
             width: 100%;
         }
-
-        /* Estilos para el código seleccionado */
+    
         .code-container {
             background-color: #282c34; /* Fondo oscuro para el contenedor de código */
             color: #61dafb; /* Color del texto del código */
@@ -94,17 +92,57 @@
             font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
             overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
         }
-
+    
         .code-container pre {
             margin: 0; /* Eliminar márgenes del elemento pre */
             white-space: pre-wrap; /* Permitir el ajuste de línea */
         }
-
-        /* Media query para pantallas pequeñas */
-        @media (max-width: 600px) {
+    
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            h2, h3 {
+                font-size: 1.5em; /* Reducir tamaño de los títulos */
+            }
+    
+            p, ul {
+                max-width: 90%; /* Reducir ancho máximo del texto y listas */
+                padding: 0 5px; /* Reducir padding lateral */
+            }
+    
+            ul li {
+                padding: 8px; /* Reducir espacio interno */
+            }
+    
+            button {
+                font-size: 14px; /* Reducir tamaño del texto en botones */
+                padding: 8px 16px; /* Ajustar padding */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .image-container {
+                max-width: 100%; /* Asegurar que las imágenes ocupen todo el ancho disponible */
+            }
+    
             .fade-image {
-                width: 90%;
-                max-width: none;
+                max-width: 100%; /* Asegurar imágenes dentro de contenedor */
+            }
+    
+            h2, h3 {
+                font-size: 1.2em; /* Reducir más el tamaño de los títulos */
+            }
+    
+            ul li {
+                font-size: 0.9em; /* Reducir tamaño del texto en listas */
+            }
+    
+            footer {
+                font-size: 0.8em; /* Reducir texto en el pie de página */
+            }
+    
+            .code-container {
+                padding: 10px; /* Reducir espacio interno en el contenedor de código */
+                font-size: 0.9em; /* Reducir tamaño del texto de código */
             }
         }
     </style>
