@@ -1,0 +1,21 @@
+.image-container {
+    width: 100%; /* Ajusta al 100% del contenedor padre */
+    max-width: 1000px; /* Establece un ancho máximo */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    position: relative; /* Para posicionar elementos si es necesario */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.fade-image {
+    width: calc(100% - 10px); /* Ajusta al 100% del contenedor menos el margen */
+    max-width: 800px; /* Establece un ancho máximo */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    opacity: 1; /* Opacidad inicial */
+    transition: opacity 1s ease-in-out; /* Transición de opacidad */
+    margin: 10px; /* Establece márgenes alrededor de la imagen */
+}
+
+.fade-image.hidden {
+    opacity: 0; /* Opacidad cuando está oculta */
+}

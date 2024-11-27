@@ -37,3 +37,26 @@ window.onclick = function(event) {
         }
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const fadeImage = document.querySelector('.fade-image');
+    const images = [
+        'imagenesPortada/torola.jpg',
+        'imagenesPortada/fonseca.jpg', // Cambia esto por el nombre real de la imagen
+        'imagenesPortada/conchagua.jpg'  // Cambia esto por el nombre real de la imagen
+    ];
+    
+    let currentIndex = 0;
+
+    function changeImage() {
+        fadeImage.classList.add('hidden'); // Agregar clase para desvanecer
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % images.length; // Cambia al siguiente índice
+            fadeImage.src = images[currentIndex]; // Cambiar la fuente de la imagen
+            fadeImage.classList.remove('hidden'); // Quitar clase para mostrar
+        }, 1000); // Esperar el tiempo de desvanecimiento (1 segundo)
+    }
+
+    // Cambiar la imagen cada 5 segundos
+    setInterval(changeImage, 4000); // Cambia la imagen cada 5 segundos
+});
