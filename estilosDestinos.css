@@ -1,30 +1,112 @@
-#destino2 {
-    display: flex; /* Coloca el texto y la imagen en una disposición horizontal */
-    flex-wrap: wrap; /* Asegura que el contenido se ajuste en dispositivos pequeños */
-    background-color: #002e6b; /* Fondo azul oscuro similar */
-    color: white; /* Texto blanco */
+/* estilosDestinos.css */
+
+/* Estilo general para las secciones de destino */
+section {
+    margin: 20px 0;
     padding: 20px;
-    border-radius: 10px;
+    border: 1px solid #ccc; /* Añadir un borde para separar las secciones */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo suave */
 }
 
-#destino2 img {
-    width: 50%; /* La imagen ocupa el 50% del ancho del contenedor */
-    max-width: 600px; /* Evita que crezca demasiado en pantallas grandes */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-right: 20px; /* Espaciado entre la imagen y el texto */
-    border-radius: 10px; /* Bordes redondeados */
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción sin deformarse */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Da un efecto de sombra similar */
+/* Estilo para las imágenes dentro de las secciones de destino */
+.destino-container {
+    display: flex; /* Usar flexbox para alinear imagen y texto */
+    align-items: flex-start; /* Alinear la imagen y el texto al inicio */
 }
 
-#destino2 h2 {
-    font-size: 24px; /* Tamaño del encabezado */
-    margin-bottom: 10px;
-    color: #add8ff; /* Un azul claro para resaltar */
+.destino-imagen {
+    width: 400px; /* Establecer un ancho específico para las imágenes */
+    height: auto; /* Mantener la proporción de la imagen */
+    max-width: 1500px;
+    max-height: 800px;
+    margin-right: 50px; /* Espacio entre la imagen y el texto */
 }
 
-#destino2 p {
-    flex: 1; /* Asegura que el texto ocupe el resto del espacio */
-    font-size: 16px;
-    line-height: 1.6;
+/* Estilo para los párrafos */
+.parrafo {
+    color: black; /* Color del texto */
+    line-height: 1.6; /* Altura de línea para mayor legibilidad */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+/* Estilo para el texto alineado a la derecha */
+.parrafo {
+    text-align: justify;
+    margin-left: 60px;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 180px;
+    font-size: 23px;
+}
+
+/* Otros estilos específicos pueden ser añadidos aquí */
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .destino-container {
+        flex-direction: column; /* Colocar los elementos en una columna */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .destino-imagen {
+        width: 100%; /* La imagen ocupa todo el ancho */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 10px; /* Añade margen inferior */
+    }
+
+    .titulo {
+        margin-top: 10px; /* Ajustar el margen superior del título */
+    }
+
+    .parrafo {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        text-align: center; /* Centrar el texto para dispositivos móviles */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .destino-container {
+        flex-direction: row; /* Colocar los elementos en una fila */
+        align-items: flex-start;
+    }
+
+    .destino-imagen {
+        width: 50%; /* La imagen ocupa el 50% del ancho */
+        margin-right: 20px; /* Espacio entre la imagen y el texto */
+    }
+
+    .titulo {
+        margin-top: 10px; /* Ajustar el margen superior del título */
+    }
+
+    .parrafo {
+        width: 50%; /* La descripción ocupa el 50% del ancho */
+        margin-left: 0;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 1025px) {
+    .destino-container {
+        flex-direction: row; /* Colocar los elementos en una fila */
+        align-items: flex-start;
+    }
+
+    .destino-imagen {
+        width: 400px; /* Establecer un ancho específico para las imágenes */
+        margin-right: 50px; /* Espacio entre la imagen y el texto */
+    }
+
+    .titulo {
+        margin-top: 180px; /* Mantener el margen superior del título */
+    }
+
+    .parrafo {
+        margin-left: 60px; /* Mantener el margen izquierdo del párrafo */
+        text-align: justify;
+    }
 }

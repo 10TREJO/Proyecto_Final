@@ -1,21 +1,9 @@
-body, html {
-    margin: 0; /* Eliminar márgenes por defecto */
-    padding: 0; /* Eliminar relleno por defecto */
-    height: 100%; /* Asegura que el body ocupe toda la altura */
-}
-header {
-    background: #10006d; /* Fondo oscuro semi-transparente para el encabezado */
-    color: white; /* Color de texto blanco */
-    padding: 20px; /* Espacio interno */
-    text-align: center; /* Centrar texto */
-}
 .contenido {
     display: flex; /* Usar flexbox para alinear el texto y la imagen */
     align-items: stretch; /* Alinear verticalmente para que el fondo del texto se estire */
     margin: 0px; /* Margen alrededor del contenido */
 
 }
-
 .texto-con-fondo {
     background-color: rgb(152, 157, 158); /* Fondo blanco semi-transparente */
     padding: 40px; /* Espacio interno para el texto */
