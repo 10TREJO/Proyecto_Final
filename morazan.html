@@ -3,115 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morazán</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="estiloDepa.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            function mostrarSeccion(id) {
-                const secciones = document.querySelectorAll('main section');
-                secciones.forEach(function(seccion) {
-                    seccion.style.display = 'none';
-                });
-                const seccionActiva = document.getElementById(id);
-                seccionActiva.style.display = 'block';
-            }
-
-            const enlaces = document.querySelectorAll('nav a');
-            enlaces.forEach(function(enlace) {
-                enlace.addEventListener('click', function(event) {
-                    event.preventDefault(); // Evitar el comportamiento por defecto del enlace
-                    const id = this.getAttribute('href').substring(1);
-                    mostrarSeccion(id);
-                });
-            });
-
-            mostrarSeccion('morazan'); // Mostrar la sección de Morazán por defecto
-        });
-    </script>
+    <title>Morazán - Oriente Mágico</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- Enlazar tu CSS principal -->
+    <link rel="stylesheet" href="estiloPortada.css"> <!-- Enlazar el archivo estiloPortada.css -->
+    <link rel="stylesheet" href="estiloDepa.css"> <!-- Enlazar el archivo estiloDepa.css -->
+    <script src="script.js" defer></script> <!-- Asegúrate de que el script se cargue después del DOM -->
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Morazán</h1>
-        </div>
+        <h1>ORIENTE MÁGICO - MORAZÁN</h1>
         <nav>
             <ul>
-                <li><a href="#morazan">Descripción</li>
-                <li><a href="#productos">Productos</a></li>
+                <li><a href="inicio.html">Inicio</a></li> <!-- Enlace a inicio.html -->
+                <li><a href="contactos.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <section id="morazan">
+        <section id="morazan" class="seccion-activa">
             <div class="imagen">
                 <img src="imagenesDepa/vistamorazan.jpeg" alt="Vista de Morazán">
             </div>
-            <br>
-            <br>
-            <br>
-            <h1 class="titulo">"La noble y leal ciudad de Morazán"</h1>
-            <br>
-            <br>
-            <br>
+            <h2>"La noble y leal ciudad de Morazán"</h2>
             <div class="contenido">
                 <div class="texto-con-fondo">
                     <p>
                         El departamento de Morazán, ubicado en la región oriental de El Salvador, es un destino turístico único que combina belleza natural, historia y cultura. Conocido por su papel histórico en el conflicto armado salvadoreño, Morazán es un lugar ideal para quienes buscan turismo cultural y ecoturismo.
-                        <br>
-                        <br>
+                        <br><br>
                         Morazán cuenta con un paisaje montañoso y fresco, lleno de bosques, ríos y cascadas, ideal para el ecoturismo. Además, tiene una profunda conexión con la historia contemporánea de El Salvador.
-                        <br>
-                        <br>
-                        Morazán es un destino que combina la majestuosidad de sus paisajes naturales, la riqueza de su historia reciente y la calidez de su gente. Es un lugar ideal para aprender, explorar y disfrutar de la tranquilidad del oriente salvadoreño.
+                        <br><br>
+                        Morazán es un destino que combina la majestuosidad de sus paisajes naturales, la riqueza de su historia reciente y la calidez de su gente. Es un lugar ideal para aprender, explorar y disfrutar de la tranquilidad del oriente salvadoreño.
                         Es un paraíso para los amantes de la naturaleza y las actividades al aire libre:
-                        <br>
-                        <br>
-                        •	Senderismo en las montañas y bosques.
-                        <br>
-                        <br>
-                        •	Observación de aves en su hábitat natural.
-                        <br>
-                        <br>
-                        •	Rutas en bicicleta por caminos rurales y montañosos.
-                        <br>
-                        <br>
+                        <br><br>
+                        • Senderismo en las montañas y bosques.
+                        <br><br>
+                        • Observación de aves en su hábitat natural.
+                        <br><br>
+                        • Rutas en bicicleta por caminos rurales y montañosos.
+                        <br><br>
                         Aunque Morazán está un poco más alejado de la capital, su entorno tranquilo y libre de urbanización masiva lo hace perfecto para quienes buscan desconexión y contacto con la naturaleza.
                     </p>
                 </div>
                 <div class="imagen">
                     <img src="imagenesDepa/morazan.jpg" alt="Vista de Morazán">
-                    <img src="imagenesDepa/morazan2.jpg" alt="Llano el Muert, Morazán"
+                    <img src="imagenesDepa/morazan2.jpg" alt="Llano el Muert, Morazán">
                 </div>
             </div>
         </section>
-
-        <section id="productos" style="display:none;">
-            <h2>Productos Destacados</h2>
-            <div class="producto-item">
-                <img src="producto1.jpg" alt="Producto 1">
-                <h3>Producto 1</h3>
-                <p>Descripción breve del producto 1.</p>
-                <a href="#" class="btn">Más Información</a>
-            </div>
-            <div class="producto-item">
-                <img src="producto2.jpg" alt="Producto 2">
-                <h3>Producto 2</h3>
-                <p>Descripción breve del producto 2.</p>
-                <a href="#" class="btn">Más Información</a>
-            </div>
+        <section id="contacto" style="display:none;">
+            <h2>Contacto</h2>
+            <p>Contenido de la sección de contacto.</p>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
-        <ul class="social-media">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
+        <a href="inicio.html" style="text-decoration: none; color: black;">Volver a Inicio</a>
+        <br>
+        &copy; 2024 Mi Sitio Web. Todos los derechos reservados.
     </footer>
 </body>
 </html>
