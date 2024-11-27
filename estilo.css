@@ -20,6 +20,7 @@ header nav ul {
     margin: 0;
     display: flex;
     justify-content: center; /* Centra los elementos del menú */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
 }
 
 header nav ul li {

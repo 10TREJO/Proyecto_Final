@@ -1,9 +1,10 @@
-/* Estilo para que la lista aparezca en una sola línea */
+/* Estilo general para la lista en una sola línea */
 ul {
     list-style-type: none; /* Elimina los puntos de la lista */
     padding: 0; /* Elimina el padding */
     margin: 0; /* Elimina el margin */
     display: flex; /* Usa flexbox para alinear los elementos en fila */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
 }
 
 li {
@@ -71,3 +72,70 @@ footer {
     margin: 10px auto; /* Centra la imagen con un margen superior e inferior */
 }
 
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    ul {
+        flex-direction: column; /* Hacer que la lista sea vertical en pantallas pequeñas */
+    }
+
+    li {
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 10px; /* Añade margen inferior entre elementos */
+    }
+
+    .accordion {
+        padding: 15px; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    footer {
+        padding: 15px 0; /* Ajusta el padding del footer para pantallas pequeñas */
+    }
+
+    .alegria {
+        width: 50px; /* Aumenta el ancho de la imagen en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    ul {
+        flex-direction: row; /* Mantener la lista en fila para pantallas medianas */
+    }
+
+    li {
+        margin-right: 15px; /* Ajusta el espaciado entre elementos */
+    }
+
+    .accordion {
+        padding: 18px; /* Mantiene el padding en pantallas medianas */
+    }
+
+    footer {
+        padding: 10px 0; /* Mantiene el padding del footer en pantallas medianas */
+    }
+
+    .alegria {
+        width: 40px; /* Ajusta el ancho de la imagen en pantallas medianas */
+    }
+}
+
+@media (min-width: 1025px) {
+    ul {
+        flex-direction: row; /* Mantener la lista en fila para pantallas grandes */
+    }
+
+    li {
+        margin-right: 20px; /* Mantiene el espaciado entre elementos */
+    }
+
+    .accordion {
+        padding: 18px; /* Mantiene el padding en pantallas grandes */
+    }
+
+    footer {
+        padding: 10px 0; /* Mantiene el padding del footer en pantallas grandes */
+    }
+
+    .alegria {
+        width: 30px; /* Mantiene el ancho de la imagen en pantallas grandes */
+    }
+}
