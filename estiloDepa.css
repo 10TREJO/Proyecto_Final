@@ -1,0 +1,71 @@
+body, html {
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar relleno por defecto */
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+}
+header {
+    background: #10006d; /* Fondo oscuro semi-transparente para el encabezado */
+    color: white; /* Color de texto blanco */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Centrar texto */
+}
+.contenido {
+    display: flex; /* Usar flexbox para alinear el texto y la imagen */
+    align-items: stretch; /* Alinear verticalmente para que el fondo del texto se estire */
+    margin: 0px; /* Margen alrededor del contenido */
+
+}
+
+.texto-con-fondo {
+    background-color: rgb(152, 157, 158); /* Fondo blanco semi-transparente */
+    padding: 40px; /* Espacio interno para el texto */
+    border-radius: 10px; /* Bordes redondeados */
+    flex: 1; /* Permitir que el texto ocupe el espacio disponible */
+    margin-right: 20px; /* Espacio entre el texto y la imagen */
+    display: flex; /* Usar flexbox para que el contenido interno se alinee correctamente */
+    flex-direction: column; /* Alinear el contenido en columna */
+    justify-content: flex-start; /* Alinear el contenido al inicio */
+}
+/* Regla para aplicar márgenes al párrafo */
+.texto-con-fondo p {
+    margin: 20px; /* Ajusta el valor según lo necesites */
+}
+.titulo {
+    font-size: 3em; /* Tamaño del texto para los títulos */
+}
+
+.texto-grande {
+    font-size: 1.5em; /* Tamaño del texto para párrafos */
+}
+.texto {
+    flex: 1; /* El texto ocupará el espacio disponible */
+    margin-right: 20px; /* Espacio entre el texto y la imagen */
+}
+.texto img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.imagen {
+    flex: 0 0 500px; /* La imagen tendrá un ancho fijo de 300px */
+}
+.imagen img {
+    width: 100%; /* La imagen ocupará el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 1500px; /* Limita el ancho máximo de la imagen a 300px */
+    max-height: 800px; /* Limita la altura máxima de la imagen a 200px */
+}
+main {
+    position: relative; /* Para que el contenido esté sobre la imagen */
+    z-index: 1; /* Asegura que el contenido esté por encima de la imagen */
+    padding: 20px; /* Espacio interno para el contenido */
+}
+h2 {
+    color: white; /* Color de texto blanco para el título */
+    text-align: center; /* Centrar título */
+}
+
+/* Nueva regla para aumentar el tamaño de los párrafos */
+p {
+    font-size: 1.2em; /* Cambia este valor según lo necesites */
+    text-align: justify;
+}

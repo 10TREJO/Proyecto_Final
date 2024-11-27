@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oriente Mágico</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estiloPortada.css">
     <script src="script.js" defer></script> <!-- Asegúrate de que el script se cargue después del DOM -->
 </head>
 <body>
@@ -13,7 +14,6 @@
         <nav>
             <ul>
                 <li><a href="inicio.html">Inicio</a></li> <!-- Enlace a inicio.html -->
-                <li><a href="#acerca-de">Acerca de</a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Descubre</a>
                     <div class="dropdown-content">
@@ -36,29 +36,13 @@
     </header>
     <main>
         <section id="inicio" class="seccion-activa">
-            <h2>Inicio</h2>
-            <p>Bienvenido a Oriente Mágico, tu guía para explorar los destinos más hermosos y mágicos.</p>
-            
-            <!-- Agregando una imagen -->
-            <img src="ruta-de-la-imagen.jpg" alt="Imagen de Oriente Mágico" style="width:100%; height:auto;">
-
-            <!-- Agregando un párrafo descriptivo -->
-            <p>Descubre la cultura, la gastronomía y la naturaleza que Oriente Mágico tiene para ofrecerte. A continuación, te presentamos algunos de nuestros destinos más populares:</p>
-            
-            <!-- Lista de destinos -->
-            <ul>
-                <li><strong>Morazán:</strong> Un lugar lleno de historia y paisajes impresionantes.</li>
-                <li><strong>Usulután:</strong> Conocido por sus playas y su rica biodiversidad.</li>
-                <li><strong>San Miguel:</strong> Famoso por su vibrante vida nocturna y festivales.</li>
-                <li><strong>La Unión:</strong> Ideal para los amantes del ecoturismo.</li>
-            </ul>
-
+            <h2>Bienvenido a Oriente Mágico, tu guía para explorar los destinos más hermosos y mágicos.</h2>
+            <!-- Presentacion de imagenes en la portada -->
+            <div class="image-container">
+                <img src="imagenesPortada/torola.jpg" alt="Otra Imagen" class="fade-image">
+            </div>
             <!-- Botón para más información -->
             <button onclick="location.href='Destinos.html'">Ver Destinos</button>
-        </section>
-        <section id="acerca-de" style="display:none;">
-            <h2>Acerca de</h2>
-            <p>Contenido de la sección acerca de.</p>
         </section>
         <section id="contacto" style="display:none;">
             <h2>Contacto</h2>

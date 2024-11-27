@@ -3,17 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Oriente Mágico</title>
+    <title>Oriente Mágico</title>
     <link rel="stylesheet" href="estilo.css">
-    <script src="script.js" defer></script>
+    <style>
+        
+        .image-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+        }
+
+        .fade-image {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-image.active {
+            opacity: 1;
+        }
+
+        h2, h3 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        p {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.6; /* Espaciado entre líneas */
+            padding: 0 10px; /* Espaciado lateral */
+        }
+
+        ul {
+            list-style-type: none; /* Elimina los puntos de la lista */
+            padding: 0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        ul li {
+            background: #a8a8a8; /* Color de fondo para los elementos de la lista */
+            color: white; /* Color del texto */
+            padding: 10px;
+            margin: 5px 0; /* Espaciado entre los elementos de la lista */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745; /* Color del botón */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Transición suave para el color del botón */
+        }
+
+        button:hover {
+            background-color: #160079; /* Color del botón al pasar el mouse */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #10006d; /* Color de fondo del pie de página */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilos para el código seleccionado */
+        .code-container {
+            background-color: #282c34; /* Fondo oscuro para el contenedor de código */
+            color: #61dafb; /* Color del texto del código */
+            padding: 15px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            margin: 20px auto; /* Margen auto para centrar */
+            max-width: 800px; /* Ancho máximo del contenedor */
+            font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
+            overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+        }
+
+        .code-container pre {
+            margin: 0; /* Eliminar márgenes del elemento pre */
+            white-space: pre-wrap; /* Permitir el ajuste de línea */
+        }
+
+        /* Media query para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .fade-image {
+                width: 90%;
+                max-width: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>ORIENTE MÁGICO</h1>
         <nav>
             <ul>
-                <li><a href="base.html">Inicio</a></li> <!-- Enlace de vuelta a index.html -->
-                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="base.html">Portada</a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Descubre</a>
                     <div class="dropdown-content">
@@ -31,15 +132,39 @@
                         <li><a href="contactos.html">Contacto</a></li>
                     </div>
                 </li>
-               
+
             </ul>
         </nav>
     </header>
     <main>
         <section id="inicio" class="seccion-activa">
             <h2>Bienvenido a Oriente Mágico</h2>
-            <p>Contenido de la sección de inicio.</p>
-            <!-- Aquí puedes agregar más contenido -->
+            <h3>¿Quiénes Somos?</h3>
+            <p>
+                Somos una agencia de turismo salvadoreña con más de 30 años de experiencia. Contamos con sucursales en San Salvador, San Miguel y Plaza Mundo, Soyapango, para poder brindarte la mejor experiencia y tu mejor viaje.
+            </p>
+            <p>
+                Te brindamos atención personalizada sobre transporte terrestre, tarifas económicas, paquetes turísticos, turismo en la Zona Oriental de El Salvador y mucho más. Nos comprometemos a realizar el viaje de tus sueños y que juntos sigamos viajando y creando recuerdos inolvidables.
+            </p>
+            <p>
+                Comenzamos como una agencia de turismo en San Miguel y ahora nos hemos podido extender a más partes de El Salvador. Tenemos la experiencia y las herramientas necesarias para atenderte.
+            </p>
+            <p>Descubre la cultura, la gastronomía y la naturaleza que Oriente Mágico tiene para ofrecerte. A continuación, te presentamos algunos de nuestros destinos más populares:</p>
+            <ul>
+                <li><strong>Morazán:</strong> Un lugar lleno de historia y paisajes impresionantes.</li>
+                <li><strong>Usulután:</strong> Conocido por sus playas y su rica biodiversidad.</li>
+                <li><strong>San Miguel:</strong> Famoso por su vibrante vida nocturna y festivales.</li>
+                <li><strong>La Unión:</strong> Ideal para los amantes del ecoturismo.</li>
+            </ul>
+            <button onclick="location.href='Destinos.html'">Ver Destinos</button>
+
+            <!-- Sección para mostrar el código seleccionado -->
+            <div class="code-container">
+                <pre>
+Como una agencia de turismo en el Oriente de El Salvador,
+nos proponemos poder brindarte un servicio y experiencia inolvidable para ti
+                </pre>
+            </div>
         </section>
     </main>
     <footer>
